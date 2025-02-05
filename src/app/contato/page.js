@@ -1,101 +1,66 @@
+import { FormCustom } from "@/components/form/page";
 import Image from "next/image";
 
-export default function Home() {
+export default function Contato() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <section class="contact stage-padding contact-page">
+        <div class="container-fluid container-xxl">
+          <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center">
+              <div>
+                <div class="main-title font-white">
+                  <h2>Entre em contato com nossos consultores especializados</h2>
+                </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+                <div class="main-text font-white">
+                  <p>Estamos aqui para ajudar sua marca a alcançar novos patamares. Preencha o formulário ao lado e fale com nossa equipe. Seja para tirar dúvidas, solicitar uma proposta ou entender como podemos impulsionar sua empresa, estamos prontos para atender você com atenção e soluções personalizadas. </p>
+                </div>
+
+                <div class="contact-img">
+                  {/* <img src="img/contact-img.png" alt="Entre em contato com a TT Creative" title="Entre em contato com a TT Creative"> */}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-2 d-flex align-items-end justify-content-center">
+              <div class="contact-icons">
+                <a href="<?= $empressWhatsappLink ?>" target="_blank">
+                  {/* <img src="img/icons/ico-whatsapp-white.svg" alt="Entre em contato pelo nosso Whatsapp" title="Entre em contato pelo nosso Whatsapp"> */}
+                </a>
+                <a href="<?= $linkedinLink ?>" target="_blank">
+                  {/* <img src="img/icons/ico-linkedin-white.svg" alt="LinkedIn da TT Creative" title="LinkedIn da TT Creative"> */}
+                </a>
+                <a href="<?= $instagramLink ?>" target="_blank">
+                  {/* <img src="img/icons/ico-instagram-white.svg" alt="Instagram da TT Creative" title="Instagram da TT Creative"> */}
+                </a>
+                <a href="<?= $facebookLink ?>" target="_blank">
+                  {/* <img src="img/icons/ico-facebook-white.svg" alt="Facebook da TT Creative" title="Facebook da TT Creative"> */}
+                </a>
+                <a href="<?= $tiktokLink ?>" target="_blank">
+                  {/* <img src="img/icons/ico-tiktok-white.svg" alt="TikTok da TT Creative" title="TikTok da TT Creative"> */}
+                </a>
+                <a href="<?= $threadsLink ?>" target="_blank">
+                  {/* <img src="img/icons/ico-threads-white.svg" alt="Threads da TT Creative" title="Threads da TT Creative"> */}
+                </a>
+                <a href="<?= $youtubeLink ?>" target="_blank">
+                  {/* <img src="img/icons/ico-youtube-white.svg" alt="Youtube da TT Creative" title="Youtube da TT Creative"> */}
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-10">
+              <div class="contact-form-box">
+                <div class="main-text font-dark">
+                  <p>Vamos construir juntos o sucesso da sua marca!</p>
+                </div>
+
+                <FormCustom />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </>
   );
 }

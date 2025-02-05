@@ -1,101 +1,127 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function LGPD() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <section className="content-page stage-padding">
+        <div className="container-fluid container-xxl">
+          <div className="row justify-content-center">
+            <div className="col-lg-12">
+              <div className="main-title font-gray mb-5">
+                <h2>Política de Privacidade</h2>
+                <span>Data da última atualização: 12/12/2024</span>
+              </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              <div className="main-subtitle font-gray">
+                <h3>Introdução</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Na T&T Creative Agency, estamos comprometidos em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos suas informações pessoais, de acordo com a Lei Geral de Proteção de Dados (LGPD) e outras legislações aplicáveis.</p>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Dados Coletados</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Coletamos informações pessoais fornecidas por você e dados gerados automaticamente durante o uso de nossos serviços. Esses dados incluem:</p>
+
+                <ul>
+                  <li><strong>Informações fornecidas diretamente:</strong> nome, e-mail, telefone, empresa, cargo, e outros dados inseridos em formulários de contato ou cadastro.</li>
+                  <li><strong>Informações coletadas automaticamente:</strong> endereço IP, tipo de navegador, duração da visita, páginas acessadas e cookies.</li>
+                </ul>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Finalidades do Uso de Dados</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Os dados coletados são utilizados para:</p>
+
+                <ol>
+                  <li>Melhorar e personalizar nossos serviços e conteúdos.</li>
+                  <li>Responder às suas solicitações de contato e orçamentos.</li>
+                  <li>Enviar comunicações relevantes, como novidades, ofertas e atualizações.</li>
+                  <li>Cumprir obrigações legais e regulatórias.</li>
+                </ol>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Compartilhamento de Dados</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Não compartilhamos suas informações pessoais com terceiros, exceto:</p>
+
+                <ul>
+                  <li><strong>Parceiros de negócios:</strong> para viabilizar a prestação de serviços contratados.</li>
+                  <li><strong>Autoridades legais:</strong> quando requerido por lei ou em processos legais.</li>
+                </ul>
+
+                <p>Em todos os casos, garantimos que os dados serão tratados com segurança e confidencialidade.</p>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Armazenamento e Segurança dos Dados</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Adotamos medidas técnicas e organizacionais para proteger seus dados pessoais contra acessos não autorizados, perda, alterações ou divulgação indevida. Os dados são armazenados em servidores seguros, com acesso restrito e criptografia.</p>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Seus Direitos</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>De acordo com a LGPD, você tem o direito de:</p>
+
+                <ul>
+                  <li>Solicitar o acesso aos seus dados pessoais.</li>
+                  <li>Corrigir ou atualizar informações desatualizadas ou incorretas.</li>
+                  <li>Solicitar a exclusão de seus dados, quando permitido por lei.</li>
+                  <li>Revogar seu consentimento para o tratamento de dados.</li>
+                </ul>
+
+                <p>Para exercer esses direitos, entre em contato pelo e-mail: <a href="mailto:ttcreativeagency@ttcreativeagency.com.br"> ttcreativeagency@ttcreativeagency.com.br </a></p>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Uso de Cookies</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Utilizamos cookies para melhorar sua experiência em nosso site. Você pode gerenciar ou desativar os cookies através das configurações do seu navegador. Alguns cookies são essenciais para o funcionamento do site.</p>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Alterações na Política de Privacidade</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Esta política pode ser atualizada periodicamente para refletir mudanças em nossas práticas ou legislação. Qualquer alteração será publicada nesta página, com data de atualização.</p>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Contato</h3>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Se tiver dúvidas ou preocupações sobre nossa Política de Privacidade ou o tratamento de seus dados pessoais, entre em contato conosco:</p>
+
+                <ul>
+                  <li><strong>E-mail:</strong> <Link href="mailto:contato@ttcreativeagency.com"> contato@ttcreativeagency.com </Link> </li>
+                  <li><strong>Telefone:</strong> <Link href="tel:+5511963112570"> (11) 96311-2570 </Link> </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </>
   );
 }
