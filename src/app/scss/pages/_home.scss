@@ -1,0 +1,242 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.banner {
+    height: 800px;
+    display: flex;
+    align-items: center;
+
+    background: {
+        image: url('/banners/banner.jpg');
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    .main {
+        &-title {
+            margin-bottom: 16px;
+
+            h1 {
+                font-size: calc(size("titleSize") + 8px);
+                font-weight: weight("ultra");
+            }
+        }
+
+        &-text {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.testimonials {
+    &-img {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: $main-border-radius;
+            object-fit: cover;
+        }
+    }
+
+    &-title {
+        color: $font-color;
+        opacity: .4;
+
+        h2 {
+            font-weight: weight("ultra");
+            font-size: calc(size("subtitleSize") - 2px);
+            display: flex;
+            flex-direction: column;
+
+            &>span {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &.first {
+                    margin-bottom: 24px;
+                }
+
+                &.second {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    &-container {
+        max-height: 920px;
+        padding: 40px 0;
+
+        @include for-size(small-tablet-medium) {
+            max-height: 1148px;
+        }
+
+        @include for-size(big-tablet-medium) {
+            max-height: 708px;
+        }
+
+        @include for-size(tablet-landscape-up) {
+            max-height: 828px;
+        }
+
+        @include for-size(big-desktop-up) {
+            max-height: 708px;
+        }
+    }
+
+    &-box {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 100px $main-border-radius $main-border-radius $main-border-radius;
+        box-shadow: $main-soft-box-shadow;
+        background-color: $light-color1;
+        transition: $main-transition;
+
+        @include for-size(big-tablet-medium) {
+            align-items: center;
+            flex-direction: row;
+            border-radius: 100px $main-border-radius $main-border-radius 100px;
+        }
+
+        @include for-size(tablet-landscape-up) {
+            align-items: flex-start;
+            flex-direction: column;
+            border-radius: 100px $main-border-radius $main-border-radius $main-border-radius;
+        }
+
+        @include for-size(desktop-up) {
+            align-items: center;
+            flex-direction: row;
+            border-radius: 100px $main-border-radius $main-border-radius 100px;
+        }
+
+        .ico {
+            width: 148px;
+            min-width: 148px;
+            height: 148px;
+            min-height: 148px;
+            border-radius: 50%;
+            border: 2px solid $font-color;
+            overflow: hidden;
+            margin-right: 20px;
+            transition: $main-transition;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            margin-top: 12px;
+            margin-bottom: 12px;
+
+            .main {
+
+                &-subtitle,
+                &-text p {
+                    transition: $main-transition;
+                }
+            }
+
+            .date {
+                display: block;
+                text-align: end;
+                margin-top: 12px;
+                color: $font-color;
+                opacity: .6;
+                transition: $main-transition;
+            }
+        }
+    }
+
+    &-swiper {
+        width: 100%;
+        height: 100%;
+
+        &-arrows {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-button {
+
+            &-top,
+            &-bottom {
+                width: 60px;
+                min-width: 60px;
+                height: 60px;
+                min-height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $light-color1;
+                box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, .50);
+                border-radius: 50%;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    object-fit: contain;
+                }
+            }
+
+            &-top {
+                margin-bottom: 20px;
+            }
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+
+            @include for-size(small-tablet-medium) {
+                &-next {
+                    .testimonials-box {
+                        background-color: rgba($main-color, .8);
+
+                        .ico {
+                            border-color: $main-color;
+                        }
+
+                        .content {
+
+                            .main-subtitle,
+                            .main-text p,
+                            .date {
+                                color: $light-color1;
+                            }
+                        }
+                    }
+
+                    @media (min-width:992px) and (max-width: 1200px) {
+                        .testimonials-box {
+                            background-color: $light-color1;
+
+                            .ico {
+                                border-color: $font-color;
+                            }
+
+                            .content {
+
+                                .main-subtitle,
+                                .main-text p,
+                                .date {
+                                    color: $font-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.cta {
+    &-one {
+        .main {
+            &-title {
+                margin-bottom: 20px;
+
+                small {
+                    font-size: size("subtitleSize");
+                    font-weight: weight("bold");
+                }
+            }
+
+            &-text {
+                margin-bottom: 24px;
+            }
+        }
+
+        &-img {
+            width: 100%;
+            height: auto;
+            @extend %centralize-with-flex;
+            margin-top: 32px;
+
+            @include for-size(tablet-landscape-up) {
+                margin-top: 0;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-two {
+        position: relative;
+
+        @include for-size(tablet-landscape-up) {
+
+            .col-lg-6,
+            .col-lg-4 {
+                position: relative;
+            }
+        }
+
+        .col-lg-6 {
+            margin-bottom: 8px;
+
+            @include for-size(tablet-landscape-up) {
+                padding-right: 4px;
+                margin-bottom: 0;
+            }
+        }
+
+        .col-lg-4 {
+            @include for-size(tablet-landscape-up) {
+                padding-left: 4px;
+            }
+        }
+
+        &-content {
+            height: 100%;
+
+            &.left {
+                border-radius: 80px $main-border-radius $main-border-radius $main-border-radius;
+                padding: 40px 20px;
+                background-color: $main-color;
+
+                @include for-size(small-tablet-medium) {
+                    padding: 80px;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after {
+                        content: '';
+                        width: 160px;
+                        height: 160px;
+                        border: 20px solid $light-color1;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -80px;
+                        right: -75px;
+                    }
+                }
+
+                @include for-size(tablet-landscape-up) {
+                    border-radius: $main-border-radius $main-border-radius $main-border-radius 80px;
+                }
+            }
+
+            &.right {
+                background-color: $light-color1;
+
+                @include for-size(tablet-landscape-up) {
+                    padding-top: 40px;
+                }
+
+                .content {
+                    padding: 40px;
+                    border-radius: $main-border-radius $main-border-radius 200px $main-border-radius;
+                    height: 400px;
+                    display: flex;
+                    align-items: flex-end;
+
+                    @include for-size(tablet-landscape-up) {
+                        border-radius: $main-border-radius 200px $main-border-radius $main-border-radius;
+                        height: 100%;
+                    }
+
+                    background: {
+                        image: url('/cta-2-img.jpg');
+                        size: cover;
+                        repeat: no-repeat;
+                    }
+                }
+            }
+        }
+
+        .main {
+            &-title {
+                margin-bottom: 24px;
+
+                font: {
+                    family: $font-family;
+                    size: size(titleSize);
+                    weight: weight(regular);
+                }
+            }
+
+            @for $i from 1 through 6 {
+                h#{$i} {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-button {
+                box-shadow: 2px 2px 0 $light-color1;
+            }
+        }
+
+    }
+
+    .content {
+        text-align: center;
+    }
+}

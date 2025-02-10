@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.sitemap {
+    // &-list {
+    //     margin: 0;
+    //     padding: 0;
+    //     list-style: none;
+    // }
+
+    // &-link {
+    //     display: inline-block;
+    //     color: $dark-color1;
+    //     text-decoration: none;
+    //     transition: $main-transition;
+
+    //     &:hover {
+    //         margin-left: 16px;
+    //         color: $second-color;
+    //     }
+
+    //     &::first-letter {
+    //         text-transform: uppercase;
+    //     }
+    // }
+}

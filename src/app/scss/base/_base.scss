@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+body {
+    background-color: $light-color1;
+    font-family: $font-family;
+    overflow-x: hidden;
+}
+
+.stage-padding {
+    padding: 40px 0;
+
+    @include for-size(tablet-portrait-up) {
+        padding: 40px 20px;
+    }
+
+    @include for-size(small-tablet-medium) {
+        padding: 40px;
+    }
+
+    @include for-size(tablet-landscape-up) {
+        padding: 80px 40px;
+    }
+
+    @include for-size(desktop-up) {
+        padding: 80px;
+    }
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}

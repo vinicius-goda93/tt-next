@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.footer {
+    position: relative;
+    padding: 60px 0;
+
+    @include for-size(tablet-portrait-up) {
+        padding: 40px 20px 0 20px;
+    }
+
+    @include for-size(small-tablet-medium) {
+        padding: 40px 40px 0 40px;
+    }
+
+    @include for-size(tablet-landscape-up) {
+        padding: 40px 40px 0 40px;
+    }
+
+    @include for-size(desktop-up) {
+        padding: 40px 80px 0 80px;
+    }
+
+    &-brand {
+        width: 270px;
+        margin-bottom: 24px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &-nav {
+        margin-bottom: 60px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: size(textMidSize);
+            text-align: center;
+
+            @include for-size(small-tablet-medium) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            li {
+                margin-left: 16px;
+                margin-right: 16px;
+                margin-bottom: 12px;
+
+                a {
+                    color: $dark-color1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        background-color: $dark-color1;
+        padding: 24px 0;
+
+        @include for-size(tablet-portrait-up) {
+            padding: 24px 20px;
+        }
+    
+        @include for-size(small-tablet-medium) {
+            padding: 24px 40px;
+        }
+    
+        @include for-size(desktop-up) {
+            padding: 24px 80px;
+        }
+
+        span {
+            color: $light-color1;
+
+            a {
+                color: $light-color1;
+                font-weight: weight(bold);
+            }
+        }
+    }
+}

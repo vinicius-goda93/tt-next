@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.main {
+    &-title {
+        @for $i from 1 through 6 {
+            h#{$i} {
+                font: {
+                    family: $font-family;
+                    size: size(titleSize);
+                    weight: weight("black");
+                }
+            }
+        }
+    }
+
+    &-text {
+        p {
+            font: {
+                family: $font-family;
+                size: size(commonTextSize);
+                weight: weight(regular);
+            }
+
+            line-height: 17px;
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-subtitle {
+        @for $i from 1 through 6 {
+            h#{$i} {
+                font: {
+                    family: $font-family;
+                    size: size(subtitleSize);
+                    weight: weight(bold);
+                }
+            }
+        }
+    }
+}
+
+.font-gray {
+    color: $font-color;
+}
+
+.font-white {
+    color: $light-color1;
+}

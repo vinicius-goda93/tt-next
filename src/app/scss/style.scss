@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+// 1. Configurations
+@use "abstracts/mixins";
+@use "abstracts/variables";
+@use "abstracts/functions";
+@use "abstracts/placeholders";
+
+// 2. Vendors
+@use "vendors/normalize";
+@use "vendors/npm-vendors";
+
+// 3. Base Stuff
+@use "base/base";
+@use "base/fonts";
+@use "base/typography";
+
+// 4. Layout Sections
+@use "layout/header";
+@use "layout/services";
+@use "layout/about";
+@use "layout/our-team";
+@use "layout/contact";
+@use "layout/footer";
+
+// 5. Components
+@use "components/buttons";
+@use "components/cards";
+@use "components/form";
+@use "components/ctas";
+@use "components/breadcrumb";
+@use "components/sidebar";
+@use "components/lgpd";
+
+// 6. Pages
+@use "pages/home";
+@use "pages/aboutPage";
+@use "pages/internal-page";
+@use "pages/sitemap";

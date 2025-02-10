@@ -1,0 +1,112 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.contact {
+    &-form {
+        width: 100%;
+
+        .input-box {
+            margin-bottom: 12px;
+
+            input,
+            textarea {
+                width: 100%;
+                height: auto;
+                padding: 12px;
+                border-radius: $main-border-radius;
+                color: $dark-color1;
+                border: 0;
+                outline: 0;
+                resize: none;
+                background-color: $light-color2;
+
+                font: {
+                    size: size(commonTextSize);
+                    family: $font-family;
+                }
+
+                &::placeholder {
+                    color: $dark-color1;
+                    font-size: size(commonTextSize);
+                    font-family: $font-family;
+                }
+            }
+
+            textarea {
+                height: 120px;
+            }
+        }
+
+        .submit-box {
+            margin-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .contact-button {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 8px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                @include for-size(big-tablet-medium) {
+                    width: 49%;
+                    margin-bottom: 0;
+                }
+
+                @include for-size(tablet-landscape-up) {
+                    width: 100%;
+                    margin-bottom: 8px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @include for-size(big-desktop-up) {
+                    margin-bottom: 0;
+
+                    &:first-child {
+                        width: 64%;
+                    }
+
+                    &:last-child {
+                        width: 34%;
+                    }
+                }
+            }
+
+            &-sidebar {
+                .contact-button {
+                    @include for-size(small-tablet-medium) {
+                        margin-bottom: 0;
+
+                        &:first-child {
+                            width: 34%;
+                        }
+    
+                        &:last-child {
+                            width: 64%;
+                        }
+                    }
+
+                    @include for-size(tablet-landscape-up) {
+                        margin-bottom: 8px;
+
+                        &:first-child {
+                            width: 100%;
+                        }
+    
+                        &:last-child {
+                            width: 100%;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                }
+        }
+    }
+}

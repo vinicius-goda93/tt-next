@@ -1,0 +1,33 @@
+// Colors
+$main-color: #8F0606;
+$second-color: #DB0909; 
+
+$font-color: #333333;
+
+$dark-color1: #262626;
+
+$light-color1: #FFFFFF;
+$light-color2: #E0E0E0;
+
+
+// Fonts
+$font-family: 'Gotham';
+
+$font-weights:(
+    "regular": 400,
+    "bold": 700,
+    "black": 800,
+    "ultra": 900,
+);
+
+$font-sizes:(
+    "titleSize": 40px,
+    "subtitleSize": 24px,
+    "textMidSize": 20px,
+    "commonTextSize": 16px,
+);
+
+// Others
+$main-transition: .3s;
+$main-soft-box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.25);
+$main-border-radius: 8px;

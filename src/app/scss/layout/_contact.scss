@@ -1,0 +1,106 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+@use "../base/typography" as *;
+.contact {
+    background-color: $dark-color1;
+
+    @include for-size(tablet-landscape-up) {
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            width: 800px;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            right: -60px;
+            background: {
+                image: url('/effects/contact-effect.svg');
+                size: contain;
+                repeat: no-repeat;
+                position: right;
+            };
+        }
+    }
+
+    .main {
+        &-title {
+            margin-bottom: 16px;
+        }
+
+        &-text {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        height: auto;
+
+        @include for-size(tablet-landscape-up) {
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &-icons {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            width: 32px;
+            height: 32px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-form-box {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        background-color: $light-color1;
+        border-radius: $main-border-radius;
+
+        @include for-size(small-tablet-medium) {
+            padding: 40px;
+        }
+    }
+
+    &.contact-page {
+        background-color: $light-color1;
+
+        &::after {
+            content: none;
+        }
+
+        .font-white {
+            @extend .font-gray;
+        }
+
+        .contact {
+            &-icons {
+                img {
+                    filter: invert(10);
+                }
+            }
+
+            &-form-box {
+                box-shadow: $main-soft-box-shadow;
+            }
+        }
+    }
+}

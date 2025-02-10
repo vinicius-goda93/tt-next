@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.content-page {
+    &-img {
+        width: 100%;
+        height: 400px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $main-border-radius;
+        }
+    }
+
+    &-card {
+        position: relative;
+        padding: 20px 20px 20px 80px;
+        border-radius: $main-border-radius;
+        background-color: $dark-color1;
+        height: 100%;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+
+        .main-subtitle h3 {
+            font-size: size(textMidSize);
+        }
+
+        &::before {
+            content: attr(data-index);
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            font-size: 180px;
+            font-weight: weight("black");
+            color: lighten($dark-color1, 5%);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.missions {
+    background-color: $dark-color1;
+
+    .main {
+        &-title {
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-card {
+        position: relative;
+        padding: 32px;
+        box-shadow: $main-soft-box-shadow;
+        border-radius: $main-border-radius;
+        text-align: center;
+        overflow: hidden;
+        height: 100%;
+        background-color: lighten($dark-color1, 10%);
+        transition: $main-transition;
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: $main-color;
+            margin: 0 auto 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 0 $second-color;
+            transition: $main-transition;
+
+            img {
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+                filter: drop-shadow(2px 2px 0 $second-color);
+                transition: $main-transition;
+            }
+        }
+
+        .main {
+
+            &-subtitle,
+            &-text {
+                transition: $main-transition;
+            }
+
+            &-subtitle {
+                margin-bottom: 8px;
+            }
+
+            &-text {
+                margin-bottom: 0;
+            }
+        }
+
+        &:hover {
+            background-color: $main-color;
+            margin-top: -12px;
+
+            .icon {
+                background-color: $second-color;
+
+                img {
+                    filter: drop-shadow(2px 2px 0 $main-color);
+                }
+            }
+
+            .main {
+
+                &-subtitle,
+                &-text {
+                    color: $light-color1;
+                }
+            }
+        }
+    }
+
+    &-content {
+        z-index: 2;
+        position: relative;
+    }
+}

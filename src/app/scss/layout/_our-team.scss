@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.our-team {
+    @include for-size(tablet-landscape-up) {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 140px;
+            position: absolute;
+            top: calc(50% + 100px);
+            left: 0;
+            transform: translateY(-50%);
+            background-image: linear-gradient(to bottom, $main-color 0px, $main-color 100px, $second-color 100px, $second-color 140px);
+            z-index: -1;
+        }
+    }
+
+    .main-title {
+        margin-bottom: 40px;
+    }
+
+    &-img {
+        display: none;
+
+        @include for-size(tablet-landscape-up) {
+            display: block;
+        }
+    }
+}

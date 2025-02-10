@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+@use "../base/typography" as *;
+.about {
+    position: relative;
+    background-color: $dark-color1;
+
+    &.about-page {
+        background-color: $light-color1;
+
+        .font-white {
+            @extend .font-gray;
+        }
+    }
+
+    @include for-size(tablet-landscape-up) {
+        &-content {
+            padding: 40px 0;
+        }
+
+        &::after {
+            content: '';
+            width: 800px;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: -60px;
+            background: {
+                image: url('/effects/about-effect.svg');
+                size: contain;
+                repeat: no-repeat;
+            };
+        }
+    }
+
+    .main {
+
+        &-title,
+        &-subtitle,
+        &-text {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-double-buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            margin-right: 12px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &-img {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        @extend %centralize-with-flex;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

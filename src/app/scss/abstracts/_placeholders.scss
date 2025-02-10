@@ -1,0 +1,25 @@
+
+@use "variables" as *;
+
+
+
+%centralize-with-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%standard-buttons-classes {
+    padding: 10px 38px;
+    border-radius: 40px;
+    transition: $main-transition;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 2px 0 $second-color;
+    outline: none;
+    font: {
+        family: $font-family;
+        weight: weight("regular");
+        size: size("commonTextSize");
+    }
+}

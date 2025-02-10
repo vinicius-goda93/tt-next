@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.sidebar {
+    padding: 32px;
+    background-color: $dark-color1;
+    border-radius: $main-border-radius;
+    position: sticky;
+    top: 140px;
+    margin-top: 40px;
+    box-shadow: 4px 4px 0 $second-color;
+
+    @include for-size(tablet-landscape-up) {
+        margin-top: 0;
+    }
+}

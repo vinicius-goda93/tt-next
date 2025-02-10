@@ -1,0 +1,176 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.main {
+    &-card {
+        position: relative;
+        padding: 20px;
+        box-shadow: $main-soft-box-shadow;
+        border-radius: $main-border-radius;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include for-size(small-tablet-medium) {
+            padding: 40px;
+        }
+
+        &-img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: $main-border-radius;
+            }
+        }
+
+        &-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+
+            .main {
+                &-subtitle {
+                    margin-bottom: 8px;
+                }
+
+                &-text {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+
+        &-double-buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            a {
+                width: 100%;
+                margin-bottom: 8px;
+                text-align: center;
+                padding: 10px 28px;
+
+                @include for-size(small-tablet-medium) {
+                    width: 49%;
+                    margin-bottom: 0;
+                }
+
+                @include for-size(big-tablet-medium) {
+                    width: 100%;
+                    margin-bottom: 8px;
+                }
+
+                @include for-size(big-desktop-up) {
+                    width: 49%;
+                    margin-bottom: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.vantages-card {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border-radius: 8px 24px 8px 8px;
+        border: 2px solid $main-color;
+        z-index: 0;
+    }
+
+    &-border {
+        position: relative;
+        padding: 20px;
+        border: 2px solid $light-color1;
+        border-radius: 8px 24px 8px 8px;
+        display: flex;
+        margin-bottom: 16px;
+        background-color: $dark-color1;
+        z-index: 2;
+        
+        .icon {
+            width: 36px;
+            margin-right: 8px;
+            @extend %centralize-with-flex
+        }
+    }
+}
+
+.our-team-card {
+    box-shadow: $main-soft-box-shadow;
+    border-radius: $main-border-radius;
+    background-color: $light-color1;
+    padding: 40px;
+    min-height: 377.4px;
+
+    &.mt-40 {
+        margin-top: 40px;
+    }
+
+    &.mt-80 {
+        margin-top: 80px;
+    }
+
+    .img {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 16px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .main {
+        &-subtitle {
+            margin-bottom: 4px;
+        }
+
+        &-text {
+            margin-bottom: 24px;
+        }
+    }
+
+    .sn-links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        
+        li {
+            margin-right: 16px;
+
+            a {
+                text-decoration: none;
+                width: 26px;
+                height: 26px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

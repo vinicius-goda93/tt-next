@@ -1,0 +1,364 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+.header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: transparent;
+    transition: $main-transition;
+    z-index: 100;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include for-size(tablet-landscape-up) {
+            position: relative;
+        }
+    }
+
+    &-brand {
+        height: 76px;
+        width: auto;
+        transition: $main-transition;
+
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+
+    &-toggle {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        top: 50%;
+        right: 32px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 99;
+        @extend %centralize-with-flex;
+
+        @include for-size(tablet-landscape-up) {
+            display: none;
+        }
+
+        .hamburger {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: $light-color1;
+            border-radius: 2px;
+            transition: $main-transition;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $light-color1;
+                border-radius: 2px;
+                transition: $main-transition;
+            }
+
+            &::before {
+                transform: translateY(-8px);
+            }
+
+            &::after {
+                transform: translateY(8px);
+            }
+        }
+
+        &.active {
+            top: 28%;
+            right: 8px;
+
+            @include for-size(small-tablet-medium) {
+                top: 50%;
+                right: 32px;
+            }
+
+            .hamburger {
+                background-color: transparent;
+
+                &::before,
+                &::after {
+                    width: calc(100% - 12px);
+                    background-color: $dark-color1;
+
+                    @include for-size(small-tablet-medium) {
+                        background-color: $light-color1;
+                    }
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+
+    &-mobile-brand {
+        width: 220px;
+        height: auto;
+        margin-bottom: 20px;
+        @extend %centralize-with-flex;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &-items {
+        position: absolute;
+        padding: 40px 20px;
+        top: 0;
+        left: 0;
+        height: calc(100vh + 50px);
+        background-color: $light-color1;
+        box-shadow: $main-soft-box-shadow;
+        width: 100%;
+        transform: translateX(-400px);
+        transition: $main-transition;
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        @include for-size(tablet-portrait-up) {
+            width: 400px;
+        }
+
+        @include for-size(tablet-landscape-up) {
+            position: unset;
+            height: unset;
+            background-color: transparent;
+            box-shadow: unset;
+            transform: unset;
+            width: auto;
+            padding: 0;
+        }
+
+        &-links {
+            padding: 0 20px 40px;
+            margin: 0;
+
+            @include for-size(tablet-landscape-up) {
+                display: flex;
+                align-items: center;
+                border-bottom: 0;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+                margin-bottom: 12px;
+
+                @include for-size(tablet-landscape-up) {
+                    margin-bottom: 0;
+                    margin-left: 24px;
+
+                    &.dropdown-link {
+                        a {
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        &:hover {
+                            .dropdown-box {
+                                opacity: 1;
+                                visibility: visible;
+                                top: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .dropdown-box {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $light-color1;
+                    padding: 40px 20px 80px;
+                    transform: translateX(-400px);
+                    transition: $main-transition;
+                    box-shadow: $main-soft-box-shadow;
+                    overflow-y: scroll;
+
+                    @include for-size(tablet-landscape-up) {
+                        top: calc(100% + 24px);
+                        left: unset;
+                        right: 0;
+                        transform: translateX(0);
+                        height: fit-content;
+                        width: 100%;
+                        border-radius: $main-border-radius;
+                        padding: 20px;
+                        overflow: hidden;
+                        opacity: 0;
+                        visibility: hidden;
+
+                        li {
+                            margin-left: 0;
+
+                            strong {
+                                font-size: size('textMidSize');
+                                margin-bottom: 24px;
+                                display: block;
+                            }
+
+                            a {
+                                position: relative;
+                                color: $dark-color1;
+                                padding: 8px 0;
+                                display: block;
+                                width: 100%;
+                                transition: $main-transition;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 8px;
+                                    left: 0;
+                                    display: inline-block;
+                                    width: 0;
+                                    height: 3px;
+                                    border-radius: 4px;
+                                    background-color: $main-color;
+                                    transition: $main-transition;
+                                }
+
+                                &:hover,
+                                &.active {
+                                    &::after {
+                                        width: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.active {
+                        transform: translateX(0);
+                    }
+
+                    .close-dropdown {
+                        display: flex;
+                        align-items: center;
+                        margin: 0 0 80px;
+                        font-weight: weight("bold");
+
+                        @include for-size(tablet-landscape-up) {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 8px 20px 8px 0;
+                    color: $dark-color1;
+                    font-size: size("textMidSize");
+                    border-radius: 50px;
+                    transition: $main-transition;
+
+                    @include for-size(tablet-landscape-up) {
+                        color: $light-color1;
+                        font-size: size("commonTextSize");
+                        border-radius: 0;
+                        padding: 20px 0;
+
+                        &.main-button {
+                            padding: 12px 40px;
+                            margin-left: 16px;
+                            border-radius: 40px;
+                        }
+                    }
+
+                    &.active {
+                        background-color: $main-color;
+                        color: $light-color1;
+                        padding-left: 20px;
+                        box-shadow: 3px 3px 0 $second-color;
+
+                        @include for-size(tablet-landscape-up) {
+                            background-color: transparent;
+                            padding-left: 0;
+                            box-shadow: none;
+                            font-weight: weight("bold");
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-slick {
+        background-color: $light-color1;
+        box-shadow: $main-soft-box-shadow;
+
+        .header {
+            &-toggle {
+
+                .hamburger,
+                .hamburger::before,
+                .hamburger::after {
+                    background-color: $dark-color1;
+                }
+
+                &.active {
+                    .hamburger {
+                        background: transparent;
+
+                        &::before,
+                        &::after {
+                            background-color: $dark-color1;
+                        }
+                    }
+                }
+            }
+
+            &-items {
+                &-links {
+                    li a {
+                        @include for-size(tablet-landscape-up) {
+                            color: $dark-color1;
+
+                            &.main-button {
+                                color: $light-color1;
+                            }
+                        }
+                    }
+
+                    .dropdown-link {
+                        img {
+                            filter: invert(100);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
