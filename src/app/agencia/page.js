@@ -1,3 +1,4 @@
+import { Breadcrumb } from "@/components/breadcrumb/page";
 import { OurTeam } from "@/components/our-team/page";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,8 @@ import Link from "next/link";
 export default function About() {
   return (
     <>
+      <Breadcrumb title="Sobre a TT Creative" pageId="about" />
+
       <section className="about stage-padding about-page">
         <div className="container-fluid container-xxl">
           <div className="row">

@@ -4,6 +4,8 @@ import Image from "next/image";
 export default function Soulucoes() {
   return (
     <>
+      <Breadcrumb title="TT Creative: Soluções em marketing digital" pageId="services" />
+
       <section className="services stage-padding pb-0">
         <div className="container-fluid container-xxl">
           <div className="row justify-content-center text-center">

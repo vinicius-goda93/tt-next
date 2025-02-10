@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Form from 'next/form'
 
-export function FormCustom() {
+export function FormCustom({ pageId }) {
     return (
         <Form className="contact-form" action="">
             <div className="input-box">
@@ -20,7 +20,7 @@ export function FormCustom() {
                 <textarea name="message" placeholder="Digite sua mensagem (Opcional)"></textarea>
             </div>
 
-            <div className="submit-box">
+            <div className={`submit-box ${pageId == 'single-service' ? 'submit-box-sidebar' : ''}`}>
                 <button className="contact-button main-button">
                     Enviar pelo whatsapp
                 </button>
