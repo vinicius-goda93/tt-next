@@ -1,5 +1,19 @@
-import { CTA1 } from "@/components/cta1/page";
+import { Breadcrumb } from "@/components/breadcrumb/page";
+import { CTA1 } from "@/components/cta-1/page";
 import Image from "next/image";
+import Link from "next/link";
+
+const title = 'As melhores Soluções em Marketing Digital'
+const description = 'Oferecemos soluções completas em marketing digital para aumentar sua presença online e atrair mais clientes.'
+
+export const metadata = {
+  title: title + ' | TT Creative',
+  description: description,
+  openGraph: {
+    title: title + ' | TT Creative',
+    description: description,
+  },
+};
 
 export default function Soulucoes() {
   return (
@@ -25,7 +39,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/estrategia-de-marketing.svg" alt="Estratégia de Marketing" title="Estratégia de Marketing"> */}
+                  <Image
+                    src="/services/estrategia-de-marketing.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Estratégia de Marketing"
+                    title="Estratégia de Marketing"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -39,10 +59,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="estrategia-de-marketing-digital" className="second-button">
+                      <Link href="/estrategia-de-marketing-digital" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -52,7 +72,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/gestao-de-midias-sociais.svg" alt="Gestão de Mídias Sociais" title="Gestão de Mídias Sociais"> */}
+                  <Image
+                    src="/services/gestao-de-midias-sociais.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Gestão de Mídias Sociais"
+                    title="Gestão de Mídias Sociais"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -66,10 +92,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="gestao-de-midias-sociais" className="second-button">
+                      <Link href="/gestao-de-midias-sociais" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -79,7 +105,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/marketing-de-conteudo.svg" alt="Marketing de Conteúdo" title="Marketing de Conteúdo"> */}
+                  <Image
+                    src="/services/marketing-de-conteudo.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Marketing de Conteúdo"
+                    title="Marketing de Conteúdo"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -93,10 +125,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="marketing-de-conteudo" className="second-button">
+                      <Link href="/marketing-de-conteudo" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -106,7 +138,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/email-marketing.svg" alt="Email Marketing" title="Email Marketing"> */}
+                  <Image
+                    src="/services/email-marketing.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Email Marketing"
+                    title="Email Marketing"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -120,10 +158,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="email-marketing" className="second-button">
+                      <Link href="/email-marketing" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -133,7 +171,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/desenvolvimento-e-lancamento-de-infoprodutos.svg" alt="Desenvolvimento e Lançamento de Infoprodutos" title="Desenvolvimento e Lançamento de Infoprodutos"> */}
+                  <Image
+                    src="/services/desenvolvimento-e-lancamento-de-infoprodutos.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Desenvolvimento e Lançamento de Infoprodutos"
+                    title="Desenvolvimento e Lançamento de Infoprodutos"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -147,10 +191,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="desenvolvimento-e-lancamento-de-infoprodutos" className="second-button">
+                      <Link href="/desenvolvimento-e-lancamento-de-infoprodutos" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -160,7 +204,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/consultoria-de-presenca-online.svg" alt="Consultoria de Presença Online" title="Consultoria de Presença Online"> */}
+                  <Image
+                    src="/services/consultoria-de-presenca-online.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Consultoria de Presença Online"
+                    title="Consultoria de Presença Online"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -174,10 +224,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="consultoria-de-presenca-online" className="second-button">
+                      <Link href="/consultoria-de-presenca-online" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -187,7 +237,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/gestao-de-eventos-e-webinars.svg" alt="Gestão de Eventos e Webinars" title="Gestão de Eventos e Webinars"> */}
+                  <Image
+                    src="/services/gestao-de-eventos-e-webinars.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Gestão de Eventos e Webinars"
+                    title="Gestão de Eventos e Webinars"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -201,10 +257,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="gestao-de-eventos-e-webinars" className="second-button">
+                      <Link href="/gestao-de-eventos-e-webinars" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -214,7 +270,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/desenvolvimento-de-branding.svg" alt="Desenvolvimento de Branding" title="Desenvolvimento de Branding"> */}
+                  <Image
+                    src="/services/desenvolvimento-de-branding.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Desenvolvimento de Branding"
+                    title="Desenvolvimento de Branding"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -228,10 +290,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="desenvolvimento-de-branding" className="second-button">
+                      <Link href="/desenvolvimento-de-branding" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -241,7 +303,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/gestao-de-trafego-pago.svg" alt="Gestão de Tráfego Pago" title="Gestão de Tráfego Pago"> */}
+                  <Image
+                    src="/services/gestao-de-trafego-pago.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Gestão de Tráfego Pago"
+                    title="Gestão de Tráfego Pago"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -255,10 +323,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="gestao-de-trafego-pago" className="second-button">
+                      <Link href="/gestao-de-trafego-pago" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -268,7 +336,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/seo.svg" alt="SEO" title="SEO"> */}
+                  <Image
+                    src="/services/seo.svg"
+                    width={1000}
+                    height={1000}
+                    alt="SEO"
+                    title="SEO"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -282,10 +356,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="seo" className="second-button">
+                      <Link href="/seo" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -295,7 +369,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/identidade-visual.svg" alt="Identidade Visual" title="Identidade Visual"> */}
+                  <Image
+                    src="/services/identidade-visual.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Identidade Visual"
+                    title="Identidade Visual"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -309,10 +389,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="indentidade-visual" className="second-button">
+                      <Link href="/indentidade-visual" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -322,7 +402,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/design-para-redes-sociais.svg" alt="Design para redes sociais" title="Design para redes sociais"> */}
+                  <Image
+                    src="/services/design-para-redes-sociais.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Design para redes sociais"
+                    title="Design para redes sociais"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -336,10 +422,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="design-para-redes-sociais" className="second-button">
+                      <Link href="/design-para-redes-sociais" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -349,7 +435,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/criacao-de-logotipos.svg" alt="Criação de logotipos" title="Criação de logotipos"> */}
+                  <Image
+                    src="/services/criacao-de-logotipos.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Criação de logotipos"
+                    title="Criação de logotipos"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -363,10 +455,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="criacao-de-logotipos" className="second-button">
+                      <Link href="/criacao-de-logotipos" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -376,7 +468,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/design-de-materiais-promocionais.svg" alt="Design de materiais promocionais" title="Design de materiais promocionais"> */}
+                  <Image
+                    src="/services/design-de-materiais-promocionais.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Design de materiais promocionais"
+                    title="Design de materiais promocionais"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -390,10 +488,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="design-de-materiais-promocionais" className="second-button">
+                      <Link href="/design-de-materiais-promocionais" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -403,7 +501,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/producao-de-conteudo-visual.svg" alt="Produção de conteúdo visual" title="Produção de conteúdo visual"> */}
+                  <Image
+                    src="/services/producao-de-conteudo-visual.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Produção de conteúdo visual"
+                    title="Produção de conteúdo visual"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -417,10 +521,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="producao-de-conteudo-visual" className="second-button">
+                      <Link href="/producao-de-conteudo-visual" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -430,7 +534,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/desenvolvimento-de-site.svg" alt="Desenvolvimento de Site" title="Desenvolvimento de Site"> */}
+                  <Image
+                    src="/services/desenvolvimento-de-site.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Desenvolvimento de Site"
+                    title="Desenvolvimento de Site"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -444,10 +554,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="desenvolvimento-de-sites" className="second-button">
+                      <Link href="/desenvolvimento-de-sites" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -457,7 +567,13 @@ export default function Soulucoes() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/marketing-de-influencia.svg" alt="Marketing de Influencia" title="Marketing de Influencia"> */}
+                  <Image
+                    src="/services/marketing-de-influencia.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Marketing de Influencia"
+                    title="Marketing de Influencia"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -471,10 +587,10 @@ export default function Soulucoes() {
                     </div>
 
                     <div className="main-card-double-buttons">
-                      <a href="marketing-de-influencia" className="second-button">
+                      <Link href="/marketing-de-influencia" className="second-button">
                         <span> Saiba mais </span>
-                      </a>
-                      <a href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </a>
+                      </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>

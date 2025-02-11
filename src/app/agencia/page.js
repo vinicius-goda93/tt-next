@@ -3,7 +3,19 @@ import { OurTeam } from "@/components/our-team/page";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function About() {
+const title = 'A Agência'
+const description = 'Conheça a TT Creative, uma agência especializada em marketing digital, branding e estratégias para impulsionar negócios.'
+
+export const metadata = {
+  title: title + ' | TT Creative',
+  description: description,
+  openGraph: {
+    title: title + ' | TT Creative',
+    description: description,
+  },
+};
+
+export default function Agencia() {
   return (
     <>
       <Breadcrumb title="Sobre a TT Creative" pageId="about" />
@@ -13,7 +25,13 @@ export default function About() {
           <div className="row">
             <div className="col-xl-6 col-lg-7 mb-5 mb-lg-0">
               <div className="about-img">
-                {/* <img src="img/about-img.png" alt="Conheça a TT Creative" title="Conheça a TT Creative"> */}
+                <Image
+                  src="/about-img.png"
+                  width={1000}
+                  height={1000}
+                  alt="Conheça a TT Creative"
+                  title="Conheça a TT Creative"
+                />
               </div>
             </div>
 
@@ -30,7 +48,7 @@ export default function About() {
                   <p>Vamos juntos transformar o potencial da sua marca em resultados que impactam!</p>
                 </div>
 
-                <Link href="<?= $empressWhatsappLink ?>" className="main-button">Entre em contato consoco</Link>
+                <Link href="https://api.whatsapp.com/send/?phone=5511963112570" className="main-button">Entre em contato consoco</Link>
               </div>
             </div>
           </div>
@@ -58,7 +76,14 @@ export default function About() {
               <div className="missions-card">
                 <div className="missions-content">
                   <div className="icon">
-                    {/* <img src="img/icons/ico-mission.svg" alt="Missão da TT Creative" title="Missão da TT Creative"> */}
+                    {/* <img src="/icons/ico-mission.svg" alt="Missão da TT Creative" title="Missão da TT Creative"> */}
+                    <Image
+                      src="/icons/ico-mission.svg"
+                      width={1000}
+                      height={1000}
+                      alt="Missão da TT Creative"
+                      title="Missão da TT Creative"
+                    />
                   </div>
 
                   <div className="main-subtitle font-white">
@@ -76,7 +101,14 @@ export default function About() {
               <div className="missions-card">
                 <div className="missions-content">
                   <div className="icon">
-                    {/* <img src="img/icons/ico-vision.svg" alt="Visão da TT Creative" title="Visão da TT Creative"> */}
+                    {/* <img src="/icons/ico-vision.svg" alt="Visão da TT Creative" title="Visão da TT Creative"> */}
+                    <Image
+                      src="/icons/ico-vision.svg"
+                      width={1000}
+                      height={1000}
+                      alt="Visão da TT Creative"
+                      title="Visão da TT Creative"
+                    />
                   </div>
 
                   <div className="main-subtitle font-white">
@@ -94,7 +126,14 @@ export default function About() {
               <div className="missions-card">
                 <div className="missions-content">
                   <div className="icon">
-                    {/* <img src="img/icons/ico-values.svg" alt="Valores da TT Creative" title="Valores da TT Creative"> */}
+                    {/* <img src="/icons/ico-values.svg" alt="Valores da TT Creative" title="Valores da TT Creative"> */}
+                    <Image
+                      src="/icons/ico-values.svg"
+                      width={1000}
+                      height={1000}
+                      alt="Valores da TT Creative"
+                      title="Valores da TT Creative"
+                    />
                   </div>
 
                   <div className="main-subtitle font-white">

@@ -22,7 +22,7 @@ export function CTA2() {
                     <div className="col-lg-4">
                         <div className="cta-two-content right">
                             <div className="content">
-                                <Link href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button">Faça já o teste!</Link>
+                                <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button">Faça já o teste!</Link>
                             </div>
                         </div>
                     </div>

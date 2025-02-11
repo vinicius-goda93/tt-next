@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const date = new Date()
+const year = date.getFullYear()
+
 export function Footer() {
     return (
         <>
@@ -9,7 +12,13 @@ export function Footer() {
                     <div className="row">
                         <div className="col-12 d-flex justify-content-center">
                             <div className="footer-brand">
-                                {/* <img src="img/logo/logo-dark.svg" alt="Logo da TT Creative" title="Logo da TT Creative"> */}
+                                <Image
+                                    src="/logo/logo-dark.svg"
+                                    width={1000}
+                                    height={1000}
+                                    alt="Logo TT Creative"
+                                    title="Logo TT Creative"
+                                />
                             </div>
                         </div>
 
@@ -33,7 +42,7 @@ export function Footer() {
                 <div className="container-fluid container-xxl">
                     <div className="row">
                         <div className="col-lg-6 text-center text-lg-start">
-                            {/* <span>&copy; TT Creative Agency <?= date("Y") ?> - Todos os direitos reservados</span> */}
+                            <span>&copy; TT Creative Agency {year} - Todos os direitos reservados</span>
                         </div>
 
                         <div className="col-lg-6 text-center text-lg-end">
@@ -43,7 +52,7 @@ export function Footer() {
                 </div>
             </div>
 
-            <div className="lgpd-box" style={{display: 'none'}}>
+            <div className="lgpd-box" style={{ display: 'none' }}>
                 <span className="title"><i className="fa-solid fa-lock fa-lg mr-1"></i> Política de Privacidade</span>
                 <p className="description">
                     Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <Link href="politica-de-privacidade" target="_blank" className="">Política de Privacidade</Link>

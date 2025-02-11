@@ -1,101 +1,146 @@
+import { Breadcrumb } from "@/components/breadcrumb/page";
+import { CTA1 } from "@/components/cta-1/page";
+import { Sidebar } from "@/components/sidebar/page";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+const title = 'Criação de Logotipos'
+const description = 'Desenvolvemos logotipos únicos e estratégicos para representar a identidade da sua marca.'
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+export const metadata = {
+    title: title + ' | TT Creative',
+    description: description,
+    openGraph: {
+        title: title + ' | TT Creative',
+        description: description,
+    },
+};
+
+export default function CriacaoDeLogotipos() {
+    return (
+        <>
+            <Breadcrumb title="Criação de Logotipos" pageId="single-service" />
+
+            <section className="content-page stage-padding pb-0">
+                <div className="container-fluid container-xxl">
+                    <div className="row">
+                        <div className="col-lg-8">
+                            <div className="main-title font-gray">
+                                <h2>Criação de Logotipos</h2>
+                            </div>
+
+                            <div className="main-text font-gray mb-4">
+                                <p>O logotipo é a alma visual da sua marca. Ele representa quem você é e comunica seus valores em um único elemento. Na T&T Creative Agency, criamos logotipos exclusivos que vão além do visual, transmitindo profissionalismo, confiança e criatividade.</p>
+                                <p>Nosso processo combina briefing estratégico, análise de mercado e design inovador para garantir que seu logotipo seja memorável e alinhado à identidade da sua marca.</p>
+                            </div>
+
+                            <div className="content-page-img">
+                                <Image
+                                    src="/services/internal/criacao-de-logotipos.webp"
+                                    width={1000}
+                                    height={1000}
+                                    alt={title}
+                                    title={title}
+                                />
+                            </div>
+
+                            <div className="main-subtitle font-gray">
+                                <h3>Como funciona nosso processo:</h3>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-lg-6 mb-4">
+                                    <div className="content-page-card" data-index="1">
+                                        <div className="content">
+                                            <div className="main-subtitle font-white">
+                                                <h3>Imersão na Marca</h3>
+                                            </div>
+                                            <div className="main-text font-white">
+                                                <p>Entendemos sua história, valores e diferenciais para criar um logotipo que comunique sua essência.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 mb-4">
+                                    <div className="content-page-card" data-index="2">
+                                        <div className="content">
+                                            <div className="main-subtitle font-white">
+                                                <h3>Pesquisa de Mercado</h3>
+                                            </div>
+                                            <div className="main-text font-white">
+                                                <p>Estudamos o setor e os concorrentes para garantir originalidade e relevância.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 mb-4">
+                                    <div className="content-page-card" data-index="3">
+                                        <div className="content">
+                                            <div className="main-subtitle font-white">
+                                                <h3>Criação e Refinamento</h3>
+                                            </div>
+                                            <div className="main-text font-white">
+                                                <p>Desenvolvemos conceitos e apresentamos opções criativas, ajustando conforme o feedback.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 mb-4">
+                                    <div className="content-page-card" data-index="4">
+                                        <div className="content">
+                                            <div className="main-subtitle font-white">
+                                                <h3>Entrega de Arquivos</h3>
+                                            </div>
+                                            <div className="main-text font-white">
+                                                <p>Fornecemos o logotipo em diversos formatos, garantindo que você possa usá-lo em diferentes mídias.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="main-subtitle font-gray">
+                                <h3>Exemplo de aplicação:</h3>
+                            </div>
+
+                            <div className="main-text font-gray mb-4">
+                                <p>Sua empresa precisa de uma identidade visual marcante para se posicionar como líder em seu segmento. Criamos um logotipo moderno, com cores que transmitem inovação e credibilidade, e entregamos um manual de aplicação para uso consistente.</p>
+                            </div>
+
+                            <div className="main-subtitle font-gray">
+                                <h3>Diferenciais:</h3>
+                            </div>
+
+                            <div className="main-text font-gray">
+                                <ul>
+                                    <li>Design 100% exclusivo e personalizado.</li>
+                                    <li>Processo colaborativo com foco em seus objetivos.</li>
+                                    <li>Entrega de arquivos prontos para todas as plataformas.</li>
+                                </ul>
+                            </div>
+
+                            <div className="main-subtitle font-gray">
+                                <h3>Benefícios:</h3>
+                            </div>
+
+                            <div className="main-text font-gray">
+                                <ul>
+                                    <li>Reconhecimento instantâneo da marca.</li>
+                                    <li>Credibilidade e profissionalismo em todas as interações.</li>
+                                    <li>Comunicação clara e alinhada aos valores da empresa.</li>
+                                </ul>
+                                <p>Fortaleça sua marca com um logotipo que impressiona e inspira confiança.</p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4">
+                            <Sidebar />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <CTA1 />
+        </>
+    );
 }

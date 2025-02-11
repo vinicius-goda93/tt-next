@@ -1,9 +1,24 @@
+import { Breadcrumb } from "@/components/breadcrumb/page";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function LGPD() {
+const title = 'Política de Privacidade'
+const description = 'Saiba como protegemos seus dados e garantimos a privacidade ao utilizar nossos serviços.'
+
+export const metadata = {
+  title: title + ' | TT Creative',
+  description: description,
+  openGraph: {
+    title: title + ' | TT Creative',
+    description: description,
+  },
+};
+
+export default function PoliticaDePrivacidade() {
   return (
     <>
+    <Breadcrumb title="Política de Privacidade" pageId="privacy" />
+
       <section className="content-page stage-padding">
         <div className="container-fluid container-xxl">
           <div className="row justify-content-center">

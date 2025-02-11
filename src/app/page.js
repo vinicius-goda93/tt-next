@@ -1,9 +1,22 @@
 import { CTA2 } from "@/components/cta-2/page";
-import { CTA1 } from "@/components/cta1/page";
-import { FormCustom } from "@/components/form/page";
+import { CTA1 } from "@/components/cta-1/page";
 import { OurTeam } from "@/components/our-team/page";
+import { ContactSection } from "@/components/contact-section/page";
 import Link from "next/link";
 import Image from "next/image";
+
+
+const title = 'TT Creative – Marketing Digital e Branding'
+const description = 'A TT Creative oferece soluções em marketing digital, branding e estratégias personalizadas para impulsionar sua marca e alcançar resultados reais.'
+
+export const metadata = {
+  title: title,
+  description: description,
+  openGraph: {
+    title: title,
+    description: description,
+  },
+};
 
 export default function Home() {
   return (
@@ -22,14 +35,14 @@ export default function Home() {
                   <p>Descubra como podemos transformar sua presença digital em uma poderosa ferramenta de crescimento.</p>
                 </div>
 
-                <Link href="#" className="main-button">Conheça os serviços que oferecemos</Link>
+                <Link href="/solucoes" className="main-button">Conheça os serviços que oferecemos</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="services stage-padding <?= $pageId == 'services' ? 'pb-0' : '' ?>">
+      <section className="services stage-padding">
         <div className="container-fluid container-xxl">
           <div className="row justify-content-center text-center">
             <div className="col-lg-8">
@@ -48,7 +61,13 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/estrategia-de-marketing.svg" alt="Estratégia de Marketing" title="Estratégia de Marketing"> */}
+                  <Image
+                    src="/services/estrategia-de-marketing.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Estratégia de Marketing"
+                    title="Estratégia de Marketing"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -65,7 +84,7 @@ export default function Home() {
                       <Link href="estrategia-de-marketing-digital" className="second-button">
                         <span> Saiba mais </span>
                       </Link>
-                      <Link href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -75,7 +94,13 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/gestao-de-midias-sociais.svg" alt="Gestão de Mídias Sociais" title="Gestão de Mídias Sociais"> */}
+                  <Image
+                    src="/services/gestao-de-midias-sociais.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Gestão de Mídias Sociais"
+                    title="Gestão de Mídias Sociais"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -92,7 +117,7 @@ export default function Home() {
                       <Link href="gestao-de-midias-sociais" className="second-button">
                         <span> Saiba mais </span>
                       </Link>
-                      <Link href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -102,7 +127,13 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 mb-24">
               <div className="main-card">
                 <div className="main-card-img">
-                  {/* <img src="img/services/marketing-de-conteudo.svg" alt="Marketing de Conteúdo" title="Marketing de Conteúdo"> */}
+                  <Image
+                    src="/services/marketing-de-conteudo.svg"
+                    width={1000}
+                    height={1000}
+                    alt="Marketing de Conteúdo"
+                    title="Marketing de Conteúdo"
+                  />
                 </div>
 
                 <div className="main-card-content">
@@ -119,7 +150,7 @@ export default function Home() {
                       <Link href="marketing-de-conteudo" className="second-button">
                         <span> Saiba mais </span>
                       </Link>
-                      <Link href="<?= $empressWhatsappLink ?>" target="_blank" className="main-button"> Whatsapp </Link>
+                      <Link href="https://api.whatsapp.com/send/?phone=5511963112570" target="_blank" className="main-button"> Whatsapp </Link>
                     </div>
                   </div>
                 </div>
@@ -134,7 +165,13 @@ export default function Home() {
           <div className="row">
             <div className="col-xl-6 col-lg-7 mb-5 mb-lg-0">
               <div className="about-img">
-                {/* <img src="img/about-img.png" alt="Conheça a TT Creative" title="Conheça a TT Creative"> */}
+                <Image
+                  src="/about-img.png"
+                  width={1000}
+                  height={1000}
+                  alt="Conheça a TT Creative"
+                  title="Conheça a TT Creative"
+                />
               </div>
             </div>
 
@@ -157,7 +194,13 @@ export default function Home() {
                     <div className="vantages-card font-white">
                       <div className="vantages-card-border">
                         <div className="icon">
-                          {/* <img src="img/icons/ico-check.svg" alt="Processo Otimizado" title="Processo Otimizado"> */}
+                          <Image
+                            src="/icons/ico-check.svg"
+                            width={37}
+                            height={27}
+                            alt="Processo Otimizado"
+                            title="Processo Otimizado"
+                          />
                         </div>
                         <div className="content">
                           <span>Processo Otimizado</span>
@@ -170,7 +213,13 @@ export default function Home() {
                     <div className="vantages-card font-white">
                       <div className="vantages-card-border">
                         <div className="icon">
-                          {/* <img src="img/icons/ico-check.svg" alt="Suporte Qualificado" title="Suporte Qualificado"> */}
+                          <Image
+                            src="/icons/ico-check.svg"
+                            width={37}
+                            height={27}
+                            alt="Suporte Qualificado"
+                            title="Suporte Qualificado"
+                          />
                         </div>
                         <div className="content">
                           <span>Suporte Qualificado</span>
@@ -183,76 +232,20 @@ export default function Home() {
                 <div className="main-text font-white">
                   <p>Contamos com uma equipe altamente qualificada, especializada em diversas áreas do marketing digital. Nosso compromisso é oferecer um suporte completo e personalizado, garantindo que suas necessidades sejam atendidas com excelência e que sua empresa receba a atenção que merece.</p>
                 </div>
-                <Link href="escritorio-de-advocacia" className="main-button">Nos conheça melhor</Link>
+                <Link href="/agencia" className="main-button">Nos conheça melhor</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <CTA1 />
+      <CTA1 pageId="home" />
 
-      <OurTeam />
+      <OurTeam pageId="home" />
 
       <CTA2 />
 
-      <section className="contact stage-padding">
-        <div className="container-fluid container-xxl">
-          <div className="row">
-            <div className="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center">
-              <div>
-                <div className="main-title font-white">
-                  <h2>Entre em contato com nossos consultores especializados</h2>
-                </div>
-
-                <div className="main-text font-white">
-                  <p>Estamos aqui para ajudar sua marca a alcançar novos patamares. Preencha o formulário ao lado e fale com nossa equipe. Seja para tirar dúvidas, solicitar uma proposta ou entender como podemos impulsionar sua empresa, estamos prontos para atender você com atenção e soluções personalizadas. </p>
-                </div>
-
-                <div className="contact-img">
-                  {/* <img src="img/contact-img.png" alt="Entre em contato com a TT Creative" title="Entre em contato com a TT Creative"> */}
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-1 col-2 d-flex align-items-end justify-content-center">
-              <div className="contact-icons">
-                <Link href="<?= $empressWhatsappLink ?>" target="_blank">
-                  {/* <img src="img/icons/ico-whatsapp-white.svg" alt="Entre em contato pelo nosso Whatsapp" title="Entre em contato pelo nosso Whatsapp"> */}
-                </Link>
-                <Link href="<?= $linkedinLink ?>" target="_blank">
-                  {/* <img src="img/icons/ico-linkedin-white.svg" alt="LinkedIn da TT Creative" title="LinkedIn da TT Creative"> */}
-                </Link>
-                <Link href="<?= $instagramLink ?>" target="_blank">
-                  {/* <img src="img/icons/ico-instagram-white.svg" alt="Instagram da TT Creative" title="Instagram da TT Creative"> */}
-                </Link>
-                <Link href="<?= $facebookLink ?>" target="_blank">
-                  {/* <img src="img/icons/ico-facebook-white.svg" alt="Facebook da TT Creative" title="Facebook da TT Creative"> */}
-                </Link>
-                <Link href="<?= $tiktokLink ?>" target="_blank">
-                  {/* <img src="img/icons/ico-tiktok-white.svg" alt="TikTok da TT Creative" title="TikTok da TT Creative"> */}
-                </Link>
-                <Link href="<?= $threadsLink ?>" target="_blank">
-                  {/* <img src="img/icons/ico-threads-white.svg" alt="Threads da TT Creative" title="Threads da TT Creative"> */}
-                </Link>
-                <Link href="<?= $youtubeLink ?>" target="_blank">
-                  {/* <img src="img/icons/ico-youtube-white.svg" alt="Youtube da TT Creative" title="Youtube da TT Creative"> */}
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-5 col-10">
-              <div className="contact-form-box">
-                <div className="main-text font-dark">
-                  <p>Vamos construir juntos o sucesso da sua marca!</p>
-                </div>
-
-                <FormCustom />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactSection />
 
     </>
   );

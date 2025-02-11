@@ -1,101 +1,143 @@
+import { Breadcrumb } from "@/components/breadcrumb/page";
+import { CTA2 } from "@/components/cta-2/page";
+import { Sidebar } from "@/components/sidebar/page";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+const title = 'Estratégia de Marketing Digital'
+const description = 'Desenvolvemos estratégias personalizadas para potencializar seus resultados no ambiente digital.'
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+export const metadata = {
+  title: title + ' | TT Creative',
+  description: description,
+  openGraph: {
+    title: title + ' | TT Creative',
+    description: description,
+  },
+};
+
+export default function EstrategiaDeMarketingDigital() {
+  return (
+    <>
+      <Breadcrumb title="Estratégia de Marketing Digital" pageId="single-service" />
+
+      <section className="content-page stage-padding pb-0">
+        <div className="container-fluid container-xxl">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="main-title font-gray">
+                <h2>Estratégia de Marketing Digital</h2>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>No universo digital em constante evolução, ter uma presença online não é suficiente. Sua marca precisa de estratégias bem definidas para se destacar e conquistar um público cada vez mais exigente e informado. Na <strong>T&T Creative Agency</strong>, entendemos que cada negócio possui necessidades específicas e objetivos únicos. Por isso, criamos estratégias de marketing digital personalizadas e orientadas por dados, desenhadas para maximizar seu potencial.</p>
+                <p>O processo começa com uma análise detalhada da sua empresa, do mercado em que você atua e do comportamento do seu público-alvo. Utilizamos ferramentas avançadas para identificar tendências, estudar seus concorrentes e mapear oportunidades. A partir disso, criamos um plano estratégico que abrange múltiplos canais e técnicas: SEO, tráfego pago, redes sociais, marketing de conteúdo, entre outros. Nosso objetivo? Garantir que sua marca esteja no lugar certo, no momento certo, falando diretamente com quem importa.</p>
+              </div>
+
+              <div className="content-page-img">
+                <Image
+                  src="/services/internal/estrategia-de-marketing-digital.webp"
+                  width={1000}
+                  height={1000}
+                  alt={title}
+                  title={title}
+                />
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Como funciona nosso processo:</h3>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-6 mb-4">
+                  <div className="content-page-card" data-index="1">
+                    <div className="content">
+                      <div className="main-subtitle font-white">
+                        <h3>Diagnóstico Inicial</h3>
+                      </div>
+                      <div className="main-text font-white">
+                        <p>Avaliamos sua presença digital atual, identificando pontos fortes, fraquezas e áreas de oportunidade.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6 mb-4">
+                  <div className="content-page-card" data-index="2">
+                    <div className="content">
+                      <div className="main-subtitle font-white">
+                        <h3>Planejamento Estratégico</h3>
+                      </div>
+                      <div className="main-text font-white">
+                        <p>Criamos um plano detalhado, alinhado às suas metas de curto e longo prazo.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6 mb-4">
+                  <div className="content-page-card" data-index="3">
+                    <div className="content">
+                      <div className="main-subtitle font-white">
+                        <h3>Execução Personalizada</h3>
+                      </div>
+                      <div className="main-text font-white">
+                        <p>Implementamos ações focadas em gerar resultados tangíveis e mensuráveis, utilizando as ferramentas e plataformas mais adequadas.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6 mb-4">
+                  <div className="content-page-card" data-index="4">
+                    <div className="content">
+                      <div className="main-subtitle font-white">
+                        <h3>Acompanhamento e Ajustes</h3>
+                      </div>
+                      <div className="main-text font-white">
+                        <p>Monitoramos os resultados continuamente, ajustando estratégias para maximizar o ROI.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="main-text font-gray mb-4">
+                <p>Imagine que você deseja aumentar as vendas de um produto específico. Nossa equipe pode desenvolver uma campanha de tráfego pago segmentada, combinada com conteúdos otimizados para SEO, para atrair clientes qualificados e gerar conversões. Ao mesmo tempo, criamos uma estratégia de email marketing para nutrir leads e manter sua marca presente na mente dos consumidores.</p>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Diferenciais:</h3>
+              </div>
+
+              <div className="main-text font-gray">
+                <ul>
+                  <li>Abordagem personalizada, com foco nos seus objetivos.</li>
+                  <li>Utilização de dados e análises para tomadas de decisão mais assertivas.</li>
+                  <li>Estratégias integradas que combinam diversas técnicas para maior impacto.</li>
+                  <li>Suporte contínuo e relatórios detalhados para acompanhar o progresso.</li>
+                </ul>
+              </div>
+
+              <div className="main-subtitle font-gray">
+                <h3>Benefícios:</h3>
+              </div>
+
+              <div className="main-text font-gray">
+                <ul>
+                  <li>Maior visibilidade online e reconhecimento da marca.</li>
+                  <li>Estratégias otimizadas que geram resultados mensuráveis.</li>
+                  <li>Melhoria do ROI através de ações focadas em conversão.</li>
+                  <li>Fortalecimento da conexão com o público-alvo.</li>
+                </ul>
+                <p>Se você busca uma estratégia de marketing digital que realmente funcione e leve sua marca ao próximo nível, conte conosco. Estamos prontos para transformar seus desafios em oportunidades.</p>
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <Sidebar />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <CTA2 />
+    </>
   );
 }

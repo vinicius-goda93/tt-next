@@ -1,10 +1,25 @@
+import { Breadcrumb } from "@/components/breadcrumb/page";
 import { CTA2 } from "@/components/cta-2/page";
 import { Sidebar } from "@/components/sidebar/page";
 import Image from "next/image";
 
-export default function Home() {
+const title = 'Consultoria de Presença Online'
+const description = 'Ajudamos sua marca a se destacar no digital com uma consultoria especializada e estratégias assertivas.'
+
+export const metadata = {
+  title: title + ' | TT Creative',
+  description: description,
+  openGraph: {
+    title: title + ' | TT Creative',
+    description: description,
+  },
+};
+
+export default function ConsultoriaDePresençaOnline() {
   return (
     <>
+      <Breadcrumb title="Consultoria de Presença Online" pageId="single-service" />
+
       <section className="content-page stage-padding pb-0">
         <div className="container-fluid container-xxl">
           <div className="row">
@@ -19,7 +34,13 @@ export default function Home() {
               </div>
 
               <div className="content-page-img">
-                {/* <img src="img/services/internal/consultoria-de-presenca-online.webp" alt="<?= $title ?>" title="<?= $title ?>"> */}
+                <Image
+                  src="/services/internal/consultoria-de-presenca-online.webp"
+                  width={1000}
+                  height={1000}
+                  alt={title}
+                  title={title}
+                />
               </div>
 
               <div className="main-subtitle font-gray">

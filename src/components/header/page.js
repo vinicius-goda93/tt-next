@@ -11,7 +11,13 @@ export function Header() {
                         <div className="header-content">
                             <div className="header-brand">
                                 <Link href="./">
-                                    {/* <img src="img/logo/logo-white.svg" alt="Logo TT Creative" title="Logo TT Creative"> */}
+                                    <Image
+                                        src="/logo/logo-white.svg"
+                                        width={1000}
+                                        height={1000}
+                                        alt="Logo TT Creative"
+                                        title="Logo TT Creative"
+                                    />
                                 </Link>
                             </div>
 
@@ -23,7 +29,13 @@ export function Header() {
 
                                 <div className="header-mobile-brand d-lg-none">
                                     <Link href="./">
-                                        {/* <img src="img/logo/logo-dark.svg" alt="Logo TT Creative" title="Logo TT Creative"> */}
+                                        <Image
+                                            src="/logo/logo-dark.svg"
+                                            width={1000}
+                                            height={1000}
+                                            alt="Logo TT Creative"
+                                            title="Logo TT Creative"
+                                        />
                                     </Link>
                                 </div>
 
@@ -34,13 +46,25 @@ export function Header() {
                                     <li className="dropdown-link">
                                         <Link href="/solucoes">
                                             Soluções
-                                            {/* <img src="img/icons/ico-arrow-down.svg" alt="Ver as soluções da TT Creative" title="Ver as soluções da TT Creative"> */}
+                                            <Image
+                                                src="/icons/ico-arrow-down.svg"
+                                                width={1000}
+                                                height={1000}
+                                                alt="Ver as soluções da TT Creative"
+                                                title="Ver as soluções da TT Creative"
+                                            />
                                         </Link>
 
                                         <ul className="dropdown-box">
                                             <span className="close-dropdown">
-                                                {/* <img src="img/icons/ico-arrow-left.svg" alt="Fechar Dropdown" title="Fechar Dropdown"> */}
-                                                    Voltar
+                                                <Image
+                                                    src="/icons/ico-arrow-left.svg"
+                                                    width={1000}
+                                                    height={1000}
+                                                    alt="Fechar Dropdown"
+                                                    title="Fechar Dropdown"
+                                                />
+                                                Voltar
                                             </span>
 
                                             <div className="container-fluid">
